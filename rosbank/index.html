@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Тестовое задание | Росбанк</title>
+</head>
+<body>
+<h1> Росбанк тестовое задание </h1>
+
+<p>Введите количество строк в матрице: <br>
+    <input type="text" id="inputRows">
+    <button onclick="addRows()">Готово</button>
+</p>
+
+<p>
+    Введите количество столбцов в матрице: <br>
+    <input type="text" id="inputColumns">
+    <button onclick="addCols()">Готово</button>
+</p>
+
+
+<p>Введите элементы массива: </p>
+<button onclick="addElements(addRows(), addCols())"
+        id="startButton">
+    Начать ввод!
+</button>
+<div id="addElements"></div>
+<br>
+<button onclick="parseElements(addRows())"
+        id = "parseButton"
+        disabled>
+    Подтвердить ввод элементов!
+</button>
+
+<hr>
+<p>Выберите операцию, которую необходимо проделать с введенной матрицей</p>
+<button style="padding: 20px; margin-bottom: 10px; width: 150px; height: 150px">умножить на <br>единичную матрицу</button> <br>
+<button style="padding: 20px; margin-bottom: 10px; width: 150px; height: 150px">умножить на случайную <br>разреженную матрицу</button> <br>
+<button style="padding: 20px; margin-bottom: 10px; width: 150px; height: 150px">умножить на статичную <br>матрицу из ресурсов</button> <br>
+<button style="padding: 20px; margin-bottom: 10px; width: 150px; height: 150px">Провести преобразование<br> по методу Гаусса</button><br>
+
+
+<script src="calculations.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.js"></script>
+<script src="https://unpkg.com/papaparse@5.1.0/papaparse.min.js"></script>
+
+</body>
+</html>
